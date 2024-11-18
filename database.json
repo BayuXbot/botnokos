@@ -1,0 +1,65 @@
+{
+  "1871895407": {
+    "name": "Adm",
+    "password": "123",
+    "verified": false,
+    "numbers": []
+  },
+  "users": {
+    "6004567939": {
+      "name": "Trio",
+      "status": "",
+      "followers": []
+    },
+    "7079832217": {
+      "name": "Aldi",
+      "status": "",
+      "followers": []
+    },
+    "6297423674": {
+      "name": "iyan",
+      "status": "",
+      "followers": []
+    },
+    "5618934190": {
+      "name": "Ravael",
+      "status": "",
+      "followers": []
+    },
+    "5944635676": {
+      "name": "lipe",
+      "status": "",
+      "followers": []
+    },
+    "6514151862": {
+      "name": "Sisurya",
+      "status": "",
+      "followers": []
+    }
+  },
+  "6514151862": {
+    "name": "Surya",
+    "phone": "6285239060794",
+    "password": "123",
+    "numbers": [],
+    "verified": true
+  },
+  "6810832269": {
+    "name": "/start",
+    "phone": "6287775953833",
+    "verified": false,
+    "numbers": []
+  },
+  "6569062331": {
+    "name": "Nanda",
+    "phone": "6287775953833",
+    "verified": false,
+    "numbers": []
+  },
+  "6229466609": {
+    "name": "Ejaa",
+    "phone": "6287775953833",
+    "verified": false,
+    "numbers": []
+  }
+}
