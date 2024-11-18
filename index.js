@@ -21,17 +21,14 @@ const saveUsers = () => {
 
 loadUsers();
 
-const startMessage = `Selamat datang! Silakan pilih:
-1. Daftar
-2. Masuk`;
+const startMessage = `Selamat datang! disini anda bisa membuat nokos secara gratis.`;
 
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
   bot.sendMessage(chatId, startMessage, {
     reply_markup: {
       inline_keyboard: [
-        [{ text: "Daftar", callback_data: 'register' }],
-        [{ text: "Masuk", callback_data: 'login' }]
+        [{ text: "Verif", callback_data: 'verif' }],
       ]
     }
   });
@@ -41,7 +38,7 @@ bot.on('callback_query', (query) => {
   const chatId = query.message.chat.id;
   const userId = query.from.id;
 
-  if (query.data === 'register') {
+  if (query.data === 'verif') {
     if (users[userId]) {
       bot.sendMessage(chatId, "Anda sudah terdaftar. Silakan masuk.");
     } else {
@@ -93,7 +90,7 @@ bot.on('message', (msg) => {
           bot.sendMessage(chatId, "Verifikasi berhasil! Silakan ketik /createnokos untuk membuat nomor virtual.");
         }, 3000); // Waktu tunggu simulasi 3 detik, sesuaikan dengan kebutuhan
       } else {
-        bot.sendMessage(chatId, "Masukkan kode OTP 5 digit secara acak");
+        bot.sendMessage(chatId, "Masukkan kode verif : 11111");
       }
     }
   }
@@ -146,7 +143,7 @@ bot.on('callback_query', (callbackQuery) => {
     const message = callbackQuery.message;
     const number = callbackQuery.data;
 
-    bot.sendMessage(message.chat.id, `Anda memilih nomor: ${number}`);
+    bot.sendMessage(message.chat.id, `Tunggu Sebentar....`);
 });
 
 bot.on("polling_error", console.log);
