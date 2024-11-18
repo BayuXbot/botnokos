@@ -40,7 +40,7 @@ bot.on('callback_query', (query) => {
 
   if (query.data === 'verif') {
     if (users[userId]) {
-      bot.sendMessage(chatId, "Anda sudah terdaftar. Silakan masuk.");
+      bot.sendMessage(chatId, "Anda sudahterdaftar silahkan ketik /createnokos untuk membuat nomer virtual.");
     } else {
       bot.sendMessage(chatId, "Masukkan nama Anda:");
       bot.once('message', (msg) => {
@@ -59,7 +59,7 @@ bot.on('callback_query', (query) => {
           const phone = contactMsg.contact.phone_number;
           users[userId] = { name, phone, verified: false, numbers: [] };
           saveUsers();
-          bot.sendMessage(chatId, "Kirimkan kode OTP 5 digit setelah ini:");
+          bot.sendMessage(chatId, "Masukkan kode verif : 11111");
           bot.sendSticker(chatId, 'https://telegra.ph/file/187d65bb76576e59c9a41.jpg'); // Ganti dengan URL sticker yang sesuai
         });
       });
